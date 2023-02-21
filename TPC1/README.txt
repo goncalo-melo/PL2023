@@ -1,6 +1,3 @@
-# PL2023
-A95085 João Gonçalo de Faria Melo
-
 21/02/2023 - João Gonçalo de Faria Melo
 
 Considerações relativas à realização do TPC1:
