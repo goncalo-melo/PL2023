@@ -1,7 +1,5 @@
 # PL2023
-A95085 João Gonçalo de Faria Melo
-
-21/02/2023 - João Gonçalo de Faria Melo
+21/02/2023 - João Gonçalo de Faria Melo (a95085)
 
 Considerações relativas à realização do TPC1:
 
@@ -21,4 +19,4 @@ Considerações relativas à realização do TPC1:
 
 - O fluxo do programa criado está bastante simplificado.
 
-- Ainda não foi explorado o módulo matplotlib.
+- Bibliografia/Ferramentas para famarialização com o módulo 'matplotlib': https://www.youtube.com/watch?v=D4VlmL3G4_o

@@ -1,5 +1,7 @@
 import csv
 
+from tabulate import tabulate
+
 from person import Person
 
 def tpc1():
@@ -128,14 +130,68 @@ def tpc1():
     # --- Distribuição da doença por níveis de colestrol ---/>
 
 
-    by_gender()
-    print_by_gender()
 
-    by_age()
-    print_by_age()
-   
-    by_cholesterol()
-    print_by_cholesterol()
+    # <--- Representação das distribuições em formato tabela ---
 
+    def print_by_gender_tabular():
+        headers = ['Sexo', 'Com Doença', 'Sem Doença']
+        data = []
+        for gender, counts in disease_by_gender.items():
+            row = [gender, counts[True], counts[False]]
+            data.append(row)
+        print('DISTRIBUIÇÃO DA DOENÇA POR SEXO')
+        print(tabulate(data, headers=headers))
+
+    def print_by_age_tabular():
+        headers = ['Escalão Etário', 'Com Doença', 'Sem Doença']
+        data = []
+        for age_group, counts in disease_by_age.items():
+            row = [age_group, counts[True], counts[False]]
+            data.append(row)
+        print('DISTRIBUIÇÃO DA DOENÇA POR ESCALÕES ETÁRIOS')
+        print(tabulate(data, headers=headers))
+
+    
+
+    # --- Representação das distribuições em formato tabela ---/>
+
+
+
+    def run():
+        by_gender()
+        #print_by_gender() debugging purposes
+
+        by_age()
+        #print_by_age() debugging purposes
+    
+        opt = 0
+        while opt != 4:
+            print("*****************************************")
+            print("Indique a distribuição:")
+            print("1 - Distribuição por sexo")
+            print("2 - Distribuição por escalões etários")
+            print("3 - Distribuição por níveis de colestrol")
+            print("4 - Sair")
+            print("*****************************************")
+
+            opt = int(input())
+
+            if opt==1:
+                print_by_gender_tabular()
+            elif opt==2:
+                print_by_age_tabular()
+            elif opt==3:
+                print('fuck')
+            elif opt==4:
+                print('Até à próxima!')
+                exit()
+
+
+    run() # inicia o fluxo do programa
+
+# executa o tpc1
 tpc1()
+
+
+
 
