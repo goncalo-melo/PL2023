@@ -8,4 +8,4 @@ class Person:
         self.disease = disease
 
     def __str__(self):
-        return f'Pessoa:\nIdade: {self.age}\ngender: {self.gender}\nTensão: {self.pressure}\ncholesterol: {self.cholesterol}\nbeat: {self.beat}\nTem Doença: {self.disease}\n'
+        return f'Pessoa:\nIdade: {self.age}\nSexo: {self.gender}\nTensão: {self.pressure}\nColesterol: {self.cholesterol}\nBatimento: {self.beat}\nTem Doença: {self.disease}\n'

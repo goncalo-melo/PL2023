@@ -11,7 +11,7 @@ Considerações relativas à realização do TPC1:
 
 - Visto que não tenho muita experiência em programação em python, recorri ao ChatGPT para aprender como podia usar corretamente os dicionários para manipular mais facilmente a informação.
 
-- Tomei a decisão de não implementar quase nenhuma validação dos limites dos argumentos devido à fiabilidade do ficheiro após análise. Além disso, a implementação desta funcionalidade será mais fácil e fará mais sentido com recurso a regular expressions.
+- Tomei a decisão de não implementar quase nenhuma validação dos limites dos argumentos devido à fiabilidade do ficheiro após análise. Além disso, a implementação desta funcionalidade será mais fácil e fará mais sentido com recurso a regular expressions. O único cuidado tido em conta foi a criar os níveis de colesterol necessários não considerar os valores de colesterol 0.
 
 - Para além da distribuição numérica, calculei também a distribuição percentual.
 
@@ -19,4 +19,4 @@ Considerações relativas à realização do TPC1:
 
 - O fluxo do programa criado está bastante simplificado.
 
-- Bibliografia/Ferramentas para famarialização com o módulo 'matplotlib': https://www.youtube.com/watch?v=D4VlmL3G4_o
+- Bibliografia/Ferramentas para famarialização com o módulo 'matplotlib': https://www.youtube.com/watch?v=D4VlmL3G4_o (ainda não implementado)
