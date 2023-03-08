@@ -18,12 +18,12 @@ def main():
         if sum_flag == True:
             if c.isdigit():
                 digits += c
-            elif c in ['o', 'O'] and string[i : i+3] in ['OFF', 'OFf', 'OfF', 'Off', 'oFF', 'ofF', 'oFf', 'off']:
+            elif c in ['o', 'O'] and string[i : i+3].lower() == 'off':
                 sum_flag = False   
             elif c == '=':
                 print("A soma das sequências de dígitos é: " + str(sum_string_digits(digits)))
         if sum_flag == False:
-            if c in ['o', 'O'] and string[i : i+2] in ['ON', 'On', 'oN', 'on']:
+            if c in ['o', 'O'] and string[i : i+2].lower() == 'on':
                 sum_flag = True
             elif c == '=':
                 print("A soma das sequências de dígitos é: " + str(sum_string_digits(digits)))

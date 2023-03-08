@@ -15,24 +15,26 @@ def main():
 
     substrings = re.findall('(?i)(.+?)(off|on|=)', string)
 
+    print(substrings) 
+    
     sum = 0
     sum_flag = True
 
     for s in substrings:
         if sum_flag == True:
             sum += sum_string_digits(s[0])
-            if s[1] in ['off', 'OFF']:
+            if s[1].lower() == 'off':
                 sum_flag = False
             elif s[1] == '=':
                 print("A soma das sequências de dígitos é: " + str(sum))
         if sum_flag == False:
-            if s[1] in ['on', 'ON']:
+            if s[1].lower() == 'on':
                 sum_flag = True
             elif s[1] == '=':
                 print("A soma das sequências de dígitos é: " + str(sum))
 
     # debug
-    # print(substrings)  
+    
    
 if __name__ == "__main__":
     main()
