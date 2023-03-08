@@ -20,7 +20,9 @@ def processes_frequency_per_year(processes):
         data.append(row)
     data.sort(key=lambda x:x[0])
 
+    print('================================') 
     print('Frequência de processos por ano:')
+    print('================================') 
     print(tabulate(data, headers=headers), '\n')
 
     return processes_per_year
@@ -60,8 +62,10 @@ def names_frequency_per_century(processes):
         items.sort(key=lambda x:x[1], reverse=True)
         row = [century, items[:5]]
         data_first_names.append(row)
-     
+
+    print('======================================') 
     print('Nomes próprios mais usados por século:')
+    print('======================================') 
     print(tabulate(data_first_names, headers=header_first_names), '\n')
 
     header_last_names = ['Século', 'Top 5 apelidos']
@@ -72,7 +76,9 @@ def names_frequency_per_century(processes):
         row = [century, items[:5]]
         data_last_names.append(row)
 
+    print('================================') 
     print('Apelidos mais usados por século:')
+    print('================================') 
     print(tabulate(data_last_names, headers=header_last_names), '\n')
 
     return first_names, last_names
@@ -101,7 +107,9 @@ def relationships_frequency(processes):
         data.append(row)
     data.sort(key=lambda x:x[1], reverse=True)
 
+    print('========================================') 
     print('Frequência dos vários tipos de relações:')
+    print('========================================') 
     print(tabulate(data, headers=headers), '\n')
 
     return relationships
