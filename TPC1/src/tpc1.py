@@ -1,7 +1,5 @@
 import csv
-
 from tabulate import tabulate
-
 from person import Person
 
 def tpc1():
