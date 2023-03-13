@@ -3,8 +3,8 @@ import json
 from statistics import mean
 
 def main():
-    csv_filepath = input("Insira o nome do dataset csv: ")
-    with open(csv_filepath) as csv_file:
+    csv_name = input("Insira o nome do dataset csv: ")
+    with open(f"../csv_files/{csv_name}") as csv_file:
         lines = csv_file.readlines()
 
     header_regex = re.compile(r'([^,{]+)(?:\{(\d+)(?:,(\d+))?\}(?:::(\w+))?)?[,]?')
@@ -59,8 +59,7 @@ def main():
                 elif aggregation_functions[field_name] == "media":
                     elem[field_name] = mean(elem[field_name])
 
-    print(csv_filepath.replace('.csv', '.json'))
-    with open(csv_filepath.replace(".csv", ".json"), "w") as json_file:
+    with open(f"../json_files/{csv_name.replace('.csv', '.json')}", "w") as json_file:
         json.dump(data, json_file, indent=len(header), ensure_ascii=False)
 
 if __name__ == '__main__':
